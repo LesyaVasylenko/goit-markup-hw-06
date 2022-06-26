@@ -46,6 +46,19 @@ body {
   padding-left: 15px;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /* ---------------------- header ----------------------*/
 .header {
   padding: 24px 0 25px 0;
@@ -557,6 +570,74 @@ body {
   fill: var(--text-teambox-btnhover-color);
 }
 
+.form-email {
+  margin-left: auto;
+}
+
+.form-text {
+  position: relative;
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.form-email-input {
+  position: relative;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-right: 12px;
+}
+
+.form-email-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-send-btn {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  margin-left: auto;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+
+  width: 200px;
+  height: 50px;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-icon {
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  align-items: center;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -567,9 +648,9 @@ body {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden .modal {
+/* .backdrop.is-hidden .modal {
   transform: translate(0, 0) scale(0.5);
-}
+} */
 
 .modal {
   position: absolute;
@@ -594,6 +675,8 @@ body {
   letter-spacing: 0.03em;
 
   color: #212121;
+
+  margin-bottom: 12px;
 }
 
 .modal-close-btn {
@@ -609,10 +692,123 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
-.is-hidden {
+
+/* .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+} */
+
+.modal-item {
+  margin-bottom: 10px;
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 14px;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.modal-text {
+  width: 100%;
+  height: 120px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  margin-bottom: 20px;
+  padding: 12px 16px;
+
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: transparent;
+  /* border-color: transparent; */
+}
+
+.modal-input:focus {
+  border-color: #2196f3;
+}
+
+.modal-input:focus + .input-icon {
+  fill: #2196f3;
+}
+
+.input-check {
+  margin-right: 7px;
+}
+
+.modal-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.modal-chek-text {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.modal-chek-text a {
+  color: #2196f3;
+}
+
+.modal-chek-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 1px solid #212121;
+}
+
+.input-check:checked + .modal-chek-text::before {
+  background: #2196f3;
+  border-radius: 2px;
+  background-image: url(../images/check.svg);
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-send-btn {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* ---------------------- portfolio ----------------------*/
