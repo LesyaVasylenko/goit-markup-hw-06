@@ -597,6 +597,8 @@ body {
   background-color: transparent;
   margin-top: 20px;
   margin-right: 12px;
+
+  color: #ffffff;
 }
 
 .form-email-input::placeholder {
@@ -630,6 +632,7 @@ body {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: transparent;
 }
 
 .modal-input:focus + .input-icon .form-icon {
@@ -642,6 +645,10 @@ body {
 .form-icon {
   display: block;
   margin-left: 10px;
+}
+
+.modal-close-btn {
+  cursor: pointer;
 }
 
 .close-btn-icon {
